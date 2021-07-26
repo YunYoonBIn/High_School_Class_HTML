@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+           <!--한글 인코딩-->
+<head>
+        <meta charset="UFT-8">
+        <title>3월 23일연습</title>
+</head>
+
+     <!--웹 문서 내용-->
+<body>
+  <form>
+     <fieldset>
+       <legend>정보</legend>
+       <h1>회원 가입</h1>
+       <!--학번 라벨과 입력함-->
+       <label for="st_number"> 학번</label>
+       <input fype="number" id="st_number">
+
+       <br>
+
+       <!--이름 입력함-->
+       <label for="">이름 <input type="text"></label>
+
+       <br>
+       <br>
+
+       <!--type button--> <!--onclick="window.open" 버튼을 눌렀을 때 윈도우 창이 열리는 이벤트(같은 폴더면 파일도 쉽게 열수 있음)-->
+       <input type="button" value="완료" onclick="window.open('http://www.naver.com')">
+     </fieldset>
+    
+     <fieldset>
+      
+       <legend>파일 첨부 type</legend>
+       <h1>파일 첨부 버튼 생성 해보기</h1>
+       <input type="file">
+ 
+     </fieldset>
+
+     <fieldset>
+       
+       <legend>회원가입</legend>
+       <h3>아이디와 패스워드</h3>
+       <li><label for="">아이디<input type="text" autofocus placeholder="아이디 입력"></label></li>
+       <br>
+       <li><label for="">패스워드<input type="password" placeholder="비밀번호 입력"></label></li>
+       <br>
+       <li<label for="">이메일<input type="email" required></label></li>
+       <br><br>
+       <input type="submit" value="제출">
+     
+    </fieldset>
+    
+    </form>
+  </body>
+</html>
