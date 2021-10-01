@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>폼 이벤트</title>
+
+        <style>
+            div {
+                width: 90%;
+                height: 530px;
+                margin: 0 auto;
+                font-size: 15pt;
+                background-color: navy;
+                color: white;
+            }
+
+            #radioButton {
+                text-align: center;
+                margin: 10px;
+                padding: 10px;
+            }
+
+            #btnArea {
+                text-align: center;
+                margin: 10px 0;
+                padding: 10px;
+            }
+
+            #ColorChange {
+                width: 300px;
+                height: 300px;
+                border: 2px dashed white;
+                border-radius: 50%;
+                margin: 30px auto;
+                position: relative;
+            }
+
+            #bgText {
+                position: absolute;
+                top: 100px;
+                left: 90px;
+                background-color: white;
+                color: black;
+                display: inline-block;
+                padding: 10px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <h3>폼 이벤트 연습하기</h3>
+            <form action="" style="background-color: #6f53ab;" onreset="default_color()" onsubmit="confirm('제출하겠습니까?')">
+                <section id="radioButton">
+
+                    <!--type=radio 공통으로 묶는 값 name, name 내에서 넘겨줄 값의 이름 value-->
+                    <label for="radiobtn"><input type="radio" name="check" id="radiobtn1" value="green" onclick="changeColor('green')" onchange="alert('green 색상이 선택되었습니다.')">
+                    Green btn</label>
+
+                    <label for="radiobtn"><input type="radio" name="check" id="radiobtn2" value="orange" onclick="changeColor('orange')" onchange="alert('orange 색상이 선택되었습니다.')">
+                    Orange btn</label>
+                </section>
+
+                <section id="btnArea">
+                    <input type="reset" id="resetBtn" style="font-size: 11pt;">
+                    <input type="submit" id="submitBtn" style="font-size: 11pt;">
+                </section>
+            </form>
+
+            <section id="ColorChange">
+                <p id="bgText">default입니다.</p>
+            </section>
+        </div>
+
+        <script>
+            function changeColor(color) {
+                document.querySelector('#ColorChange').style.backgroundColor = color;
+                document.querySelector('#bgText').innerText = color + "입니다.";
+            }
+
+            function default_color() {
+                confirm("초기화시키겠습니까?");
+                document.querySelector('#ColorChange').style.backgroundColor = "navy";
+                document.querySelector('#bgText').innerText = "default입니다.";
+            }
+        </script>
+    </body>
+</html>
